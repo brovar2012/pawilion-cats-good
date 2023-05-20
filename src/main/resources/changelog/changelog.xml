@@ -6,8 +6,5 @@
     <include file="changelog/changelog-1.0/001-create-tables.xml"/>
     <include file="changelog/changelog-1.0/002-create-customers.xml"/>
     <include file="changelog/changelog-1.0/003-create-orders.xml"/>
-    <!-- Add additional change sets here as needed -->
-
-<!--    <include file="changelog-1.0/001-create-tables.xml"/>-->
 
 </databaseChangeLog>
