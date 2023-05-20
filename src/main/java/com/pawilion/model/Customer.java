@@ -6,19 +6,13 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Data
 @Table("customers")
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Customer {
-
   @Id private Long id;
-
-  private String firstName;
-
-  private String lastName;
-
+  private String name;
   private String email;
-
   private String phone;
 }

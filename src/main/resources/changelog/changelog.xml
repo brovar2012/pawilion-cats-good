@@ -4,8 +4,6 @@
                    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <include file="changelog/changelog-1.0/001-create-tables.xml"/>
-    <!-- Add additional change sets here as needed -->
-
-<!--    <include file="changelog-1.0/001-create-tables.xml"/>-->
+    <include file="changelog/changelog-1.0/002-create-customers.xml"/>
 
 </databaseChangeLog>
