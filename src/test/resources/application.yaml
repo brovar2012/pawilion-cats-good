@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: pawilion
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    properties:
+      default_schema: public
+      hibernate:
+        order_by:
+          default_null_ordering: last
+        jdbc:
+          time_zone: UTC
+        temp:
+          use_jdbc_metadata_defaults: false
+        auto_quote_keyword: true
+  datasource:
+    r2dbc:
+      username: postgres
+      password: postgres
+      host: localhost
+      port: 5438
+      db-name: pet_shop
+  liquibase:
+    default-schema: public
+    enabled: true
+    url: jdbc:postgresql://localhost:5438/pet_shop
+    user: postgres
+    password: postgres
+    change-log: classpath:/changelog/changelog.xml
