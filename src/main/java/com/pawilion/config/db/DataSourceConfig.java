@@ -3,16 +3,9 @@ package com.pawilion.config.db;
 import io.r2dbc.postgresql.PostgresqlConnectionConfiguration;
 import io.r2dbc.postgresql.PostgresqlConnectionFactory;
 import io.r2dbc.spi.ConnectionFactory;
-import java.util.HashMap;
-import java.util.Map;
-import javax.sql.DataSource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.data.r2dbc.config.AbstractR2dbcConfiguration;
 import org.springframework.r2dbc.core.DatabaseClient;
 
 @Configuration
@@ -35,20 +28,18 @@ public class DataSourceConfig {
 
   @Bean
   public ConnectionFactory connectionFactory() {
-    return
-            new PostgresqlConnectionFactory(
-                    PostgresqlConnectionConfiguration.builder()
-                            .database(readerDbName)
-                            .host(readerHost)
-                            .port(readerPort)
-                            .username(readerUsername)
-                            .password(readerPassword)
-                            .build());
+    return new PostgresqlConnectionFactory(
+        PostgresqlConnectionConfiguration.builder()
+            .database(readerDbName)
+            .host(readerHost)
+            .port(readerPort)
+            .username(readerUsername)
+            .password(readerPassword)
+            .build());
   }
 
   @Bean
   public DatabaseClient databaseClient(ConnectionFactory connectionFactory) {
     return DatabaseClient.create(connectionFactory);
   }
-
 }
