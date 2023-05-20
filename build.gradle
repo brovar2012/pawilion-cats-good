@@ -1,0 +1,58 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.2'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'com.diffplug.spotless' version '5.16.0'
+}
+
+spotless {
+	lineEndings 'UNIX'
+	java {
+		googleJavaFormat()
+	}
+}
+
+group = 'com.pawilion'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-r2dbc'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.postgresql:postgresql'
+	runtimeOnly 'org.postgresql:r2dbc-postgresql'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+
+	//JDBC configuration for liquibase and flowable
+	implementation 'org.postgresql:postgresql:42.3.3'
+
+	//Lombok
+	compileOnly 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	testCompileOnly 'org.projectlombok:lombok:1.18.24'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.24'
+
+	//Test containers
+	testImplementation "org.testcontainers:postgresql:1.17.3"
+	testImplementation "org.testcontainers:testcontainers:1.17.3"
+	testImplementation "org.testcontainers:junit-jupiter:1.17.3"
+
+//	implementation 'io.r2dbc:r2dbc-postgresql'
+	implementation 'io.r2dbc:r2dbc-postgresql:0.8.13.RELEASE'
+
+	implementation 'org.liquibase:liquibase-core:4.11.0'
+
+//	implementation 'com.google.code.findbugs:jsr305:3.0.2'
+
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
