@@ -1,8 +1,4 @@
 spring:
-#  r2dbc:
-#    url: r2dbc:postgresql://localhost:5438/pet_shop
-#    username: postgres
-#    password: postgres
   application:
     name: pawilion
 
