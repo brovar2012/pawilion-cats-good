@@ -6,5 +6,7 @@
     <include file="changelog/changelog-1.0/001-create-tables.xml"/>
     <include file="changelog/changelog-1.0/002-create-customers.xml"/>
     <include file="changelog/changelog-1.0/003-create-orders.xml"/>
+    <include file="changelog/changelog-1.0/004-add-customer-to-pets.xml"/>
+    <include file="changelog/changelog-1.0/005-add-product.xml"/>
 
 </databaseChangeLog>
