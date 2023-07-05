@@ -1,15 +1,18 @@
 package com.pawilion.model;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Data
 @Table("pets")
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Pet {
 
   @Id private Long id;
@@ -20,9 +23,6 @@ public class Pet {
 
   private Integer age;
 
-  public Pet(String name, String species, Integer age) {
-    this.name = name;
-    this.species = species;
-    this.age = age;
-  }
+  @Column("customer_id")
+  private Long customerId;
 }

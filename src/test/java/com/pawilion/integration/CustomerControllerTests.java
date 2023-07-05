@@ -1,7 +1,8 @@
-package com.pawilion;
+package com.pawilion.integration;
 
 import static org.mockito.Mockito.when;
 
+import com.pawilion.BaseIntegrationTest;
 import com.pawilion.model.Customer;
 import com.pawilion.repository.CustomerRepository;
 import org.junit.jupiter.api.Test;
