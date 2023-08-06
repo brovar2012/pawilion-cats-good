@@ -8,5 +8,8 @@
     <include file="changelog/changelog-1.0/003-create-orders.xml"/>
     <include file="changelog/changelog-1.0/004-add-customer-to-pets.xml"/>
     <include file="changelog/changelog-1.0/005-add-product.xml"/>
+    <include file="changelog/changelog-1.0/006-create-category-table.xml"/>
+    <include file="changelog/changelog-1.0/007-create-review-table.xml"/>
+    <include file="changelog/changelog-1.0/008-create-cart-table.xml"/>
 
 </databaseChangeLog>
