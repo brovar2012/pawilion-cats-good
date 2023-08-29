@@ -31,7 +31,7 @@ public abstract class BaseIntegrationTest {
                                 "-c",
                                 "shared_buffers=512MB",
                                 "-c",
-                                "max_connections=400"))
+                                "max_connections=100"))
                         .withHostConfig(
                             new HostConfig()
                                 .withPortBindings(

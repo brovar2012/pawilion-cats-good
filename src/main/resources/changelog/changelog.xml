@@ -12,5 +12,7 @@
     <include file="changelog/changelog-1.0/007-create-review-table.xml"/>
     <include file="changelog/changelog-1.0/008-create-cart-table.xml"/>
     <include file="changelog/changelog-1.0/009-create-brand-table.xml"/>
+    <include file="changelog/changelog-1.0/010-create-user-table.xml"/>
+    <include file="changelog/changelog-1.0/011-create-faq-table.xml"/>
 
 </databaseChangeLog>
